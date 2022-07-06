@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">GameYuppiApp</string>
+    <string name="home">Home</string>
+    <string name="favorite">favorite</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="user">user</string>
+    <string name="login">Login</string>
+    <string name="profile">Profile</string>
+    <string name="name">Name</string>
+    <string name="username">Username</string>
+    <string name="userName">Username</string>
+    <string name="Profile_edit">Edit Profile</string>
+    <string name="profileName">Ali</string>
+    <string name="profileUser">Aliyilmaz</string>
+    <string name="profileSurName">Ali yilmaz</string>
+    <string name="profileBirthData">05/09/1995</string>
+    <string name="profilePassword">123456789</string>
+    <string name="profileEmail">ali@gmail.com</string>
+    <string name="birth_data">Birth Data</string>
+    <string name="sname">SurName</string>
+    <string name="signOut">Sign Out</string>
+    <string name="signUpdate">Update</string>
+    <string name="top">top</string>
+    <string name="yuppi">Yuppi</string>
+    <string name="create">Create New Account</string>
+    <string name="testEmail">test@gmail.com</string>
+    <string name="email">Email</string>
+    <string name="loginEnter">Login to your account</string>
+    <string name="password">Password</string>
+    <string name="doAccount">Do not have an Account?</string>
+    <string name="c_password">Confirm Password</string>
+    <string name="timeout">timeout</string>
+    <string name="signup">Sign Up</string>
+    <string name="api_key_limited">API key Limited.</string>
+    <string name="no_internet_connection">No internet connection</string>
+    <string name="resource_not_found">Resource not found.</string>
+
+</resources>

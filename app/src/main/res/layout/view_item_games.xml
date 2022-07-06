@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="gameData"
+            type="com.eneselcuk.gameyuppiapp.data.remote.model.stores.StoresItem" />
+
+        <variable
+            name="gameClick"
+            type="com.eneselcuk.gameyuppiapp.ui.fragment.home.adapter.HomeGamesAdapter.GameClick" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/marginHorizontal"
+        android:layout_marginVertical="@dimen/layout_marginVertical_s"
+        android:onClick="@{() -> gameClick.onClick(gameData)}"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/paddingHorizontal">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/image_food"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="20dp"
+            android:minWidth="50dp"
+            android:minHeight="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/roundedImageView"
+            app:storeImage="@{gameData.images.logo}" />
+
+    </LinearLayout>
+</layout>

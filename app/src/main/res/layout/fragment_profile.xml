@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="setDataProfile"
+            type="com.eneselcuk.gameyuppiapp.ui.fragment.profile.ProfileUiState" />
+
+        <variable
+            name="click"
+            type="com.eneselcuk.gameyuppiapp.ui.fragment.profile.ProfileViewModel" />
+
+        <variable
+            name="editClick"
+            type="com.eneselcuk.gameyuppiapp.ui.fragment.profile.ProfileFragment" />
+
+        <variable
+            name="editStatus"
+            type="Boolean" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/image_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> editClick.editTextClick()}"
+            android:src="@drawable/ic_baseline_edit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/view_top"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginVertical="150dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image_edit" />
+
+        <TextView
+            android:id="@+id/text_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/exo_extralight"
+            android:text="@string/userName"
+            android:textColor="@color/teal_700"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@id/view_username"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view_top" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/profileUsernameEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:background="@android:color/transparent"
+            android:focusableInTouchMode="@{editStatus}"
+            android:fontFamily="@font/exo_black"
+            android:gravity="end"
+            android:hint="@string/profileUser"
+            android:inputType="text"
+            android:maxWidth="300dp"
+            android:minWidth="280dp"
+            android:padding="10dp"
+            android:text="@{setDataProfile.username.toString()}"
+            android:textColor="@color/teal_700"
+            android:textColorHint="@color/teal_700"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view_top" />
+
+        <View
+            android:id="@+id/view_username"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:background="@color/brainstem_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profileUsernameEditText" />
+
+
+        <TextView
+            android:id="@+id/text_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/exo_extralight"
+            android:text="@string/name"
+            android:textColor="@color/teal_700"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@id/view_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_username" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/profileNameEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:background="@android:color/transparent"
+            android:focusableInTouchMode="@{editStatus}"
+            android:fontFamily="@font/exo_black"
+            android:gravity="end"
+            android:hint="@string/profileName"
+            android:inputType="text"
+            android:maxWidth="300dp"
+            android:minWidth="280dp"
+            android:padding="10dp"
+            android:textColor="@color/teal_700"
+            android:text="@{setDataProfile.name.toString()}"
+            android:textColorHint="@color/teal_700"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_username" />
+
+        <View
+            android:id="@+id/view_name"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:background="@color/brainstem_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profileNameEditText" />
+
+        <TextView
+            android:id="@+id/text_surname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/exo_extralight"
+            android:text="@string/sname"
+            android:textColor="@color/teal_700"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@id/view_surname"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_name" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/profileSurnEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:background="@android:color/transparent"
+            android:focusableInTouchMode="@{editStatus}"
+            android:fontFamily="@font/exo_black"
+            android:gravity="end"
+            android:hint="@string/profileSurName"
+            android:inputType="text"
+            android:maxWidth="300dp"
+            android:minWidth="280dp"
+            android:padding="10dp"
+            android:textColor="@color/teal_700"
+            android:text="@{setDataProfile.surname.toString()}"
+            android:textColorHint="@color/teal_700"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_name" />
+
+        <View
+            android:id="@+id/view_surname"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:background="@color/brainstem_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profileSurnEditText" />
+
+
+        <TextView
+            android:id="@+id/text_birth_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/exo_extralight"
+            android:text="@string/birth_data"
+            android:textColor="@color/teal_700"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@id/view_birthData"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_surname" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/profileBirtEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:background="@android:color/transparent"
+            android:focusableInTouchMode="@{editStatus}"
+            android:fontFamily="@font/exo_black"
+            android:gravity="end"
+            android:hint="@string/profileBirthData"
+            android:inputType="datetime"
+            android:maxWidth="300dp"
+            android:minWidth="280dp"
+            android:padding="10dp"
+            android:textColor="@color/teal_700"
+            android:text="@{setDataProfile.birthData.toString()}"
+            android:textColorHint="@color/teal_700"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_surname" />
+
+        <View
+            android:id="@+id/view_birthData"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:background="@color/brainstem_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profileBirtEditText" />
+
+        <TextView
+            android:id="@+id/text_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/exo_extralight"
+            android:text="@string/email"
+            android:textColor="@color/teal_700"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@id/view_email"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_birthData" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/profileEmailEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:background="@android:color/transparent"
+            android:focusableInTouchMode="@{editStatus}"
+            android:fontFamily="@font/exo_black"
+            android:gravity="end"
+            android:hint="@string/profileEmail"
+            android:inputType="textEmailAddress"
+            android:maxWidth="300dp"
+            android:minWidth="280dp"
+            android:padding="10dp"
+            android:text="@{setDataProfile.email.toString()}"
+            android:textColor="@color/teal_700"
+            android:textColorHint="@color/teal_700"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_birthData" />
+
+        <View
+            android:id="@+id/view_email"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:background="@color/brainstem_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profileEmailEditText" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_login"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="100dp"
+            android:backgroundTint="@color/milk"
+            android:minWidth="270dp"
+            android:minHeight="60dp"
+            android:onClick="@{() -> click.signOutClick()}"
+            android:text="@string/signOut"
+            android:textAllCaps="false"
+            android:textColor="@color/teal_700"
+            android:textSize="21sp"
+            android:visibility="visible"
+            app:cornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_email" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_Update"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="100dp"
+            android:backgroundTint="@color/milk"
+            android:minWidth="270dp"
+            android:minHeight="60dp"
+            android:onClick="@{() -> click.userUpdate(profileUsernameEditText.getText().toString(),profileNameEditText.getText().toString(),profileSurnEditText.getText().toString(),profileBirtEditText.getText().toString(),profileEmailEditText.getText().toString())}"
+            android:text="@string/signUpdate"
+            android:textAllCaps="false"
+            android:textColor="@color/teal_700"
+            android:textSize="21sp"
+            android:visibility="gone"
+            app:cornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_email" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
