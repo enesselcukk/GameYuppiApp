@@ -13,32 +13,22 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class LoginActivity : BaseActivity<ActivityLoginBinding>(ActivityLoginBinding::inflate) {
-
     private val viewModel: LoginViewModel by lazy {
         LoginViewModel(this@LoginActivity)
     }
-
     override fun definition() {
-
-
         val db = Firebase.auth.currentUser
-
         if (db != null) {
             val intent = Intent(this, MainActivity::class.java)
             finish()
             startActivity(intent)
         }
-
         activityDataBinding.setDataAndClick = this
         activityDataBinding.setData = viewModel
-
     }
-
-
     fun signUp() {
         val myIntent = Intent(this@LoginActivity, SignUpActivity::class.java)
         startActivity(myIntent)
     }
-
 }
 
