@@ -10,7 +10,7 @@ Libraries Used
   * [Gson][10] for convert Java Objects into their JSON representation
   * [Hilt][11] for dependency injection
   * [Glide][13] for Image.
-  * [Firebase][14] Firebase is used authentication and firestore 
+  * [Firebase][14] is used authentication and firestore 
   * [Coroutines][16] is used for asynchronous programming on Android
   * [koltin-parecelize][17] is used between screens to data carry 
   
