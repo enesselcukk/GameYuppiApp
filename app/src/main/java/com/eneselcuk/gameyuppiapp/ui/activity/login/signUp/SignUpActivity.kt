@@ -1,15 +1,13 @@
 package com.eneselcuk.gameyuppiapp.ui.activity.login.signUp
 
 
-import android.view.View
+
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import com.eneselcuk.gameyuppiapp.base.BaseActivity
 import com.eneselcuk.gameyuppiapp.databinding.ActivitySignUpBinding
-import com.eneselcuk.gameyuppiapp.util.fullScreen
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint

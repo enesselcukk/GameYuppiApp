@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.ListAdapter
 import com.eneselcuk.gameyuppiapp.R
 import com.eneselcuk.gameyuppiapp.data.remote.model.deails.DeailsItem
 
-class DetailAdapter() :
+class DetailAdapter :
     ListAdapter<DeailsItem, DetailVHolder>(DetailDiffUtil) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DetailVHolder =
         DetailVHolder(
@@ -22,7 +22,5 @@ class DetailAdapter() :
         holder.bind(gamePosition)
     }
 
-//    class GameClick(val click: (StoresItem) -> Unit) {
-//        fun onClick(game: StoresItem) = click(game)
-//    }
+
 }

@@ -25,7 +25,7 @@ class ProfileFragment : BaseFragment<FragmentProfileBinding>() {
         binding?.editClick = this
     }
 
-    fun animation(idAnim: Int): Animation {
+    private fun animation(idAnim: Int): Animation {
         animation = AnimationUtils.loadAnimation(requireContext(), idAnim)
         return animation
     }

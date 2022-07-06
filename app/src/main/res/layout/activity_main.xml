@@ -8,7 +8,7 @@
         android:layout_height="match_parent"
         android:fitsSystemWindows="true"
         android:orientation="vertical"
-        tools:context=".MainActivity">
+        tools:context=".ui.activity.login.MainActivity">
 
         <fragment
             android:id="@+id/nav_host_fragmentt"

@@ -9,7 +9,6 @@ class DetailVHolder(private val binding: ViewItemDetailBinding) :
 
     fun bind(
         games: DeailsItem,
-//        click: DetailAdapter.GameClick
     ) {
         binding.deailDeata = games
     }

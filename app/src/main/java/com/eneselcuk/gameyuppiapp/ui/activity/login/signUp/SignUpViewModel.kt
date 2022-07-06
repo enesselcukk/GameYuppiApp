@@ -6,7 +6,7 @@ import android.content.Intent
 import android.util.Log
 import android.widget.Toast
 import androidx.lifecycle.ViewModel
-import com.eneselcuk.gameyuppiapp.MainActivity
+import com.eneselcuk.gameyuppiapp.ui.activity.login.MainActivity
 import com.eneselcuk.gameyuppiapp.util.Constants.EMAIL
 import com.eneselcuk.gameyuppiapp.util.Constants.ID
 import com.eneselcuk.gameyuppiapp.util.Constants.NAME
@@ -45,19 +45,19 @@ class SignUpViewModel(private val context: Activity) : ViewModel() {
         if (email.isEmpty() && password.isEmpty() && confirm.isEmpty()) {
             Log.d(TAG, "null")
         } else {
-            if (password.equals(confirm)) {
+            if (password == confirm) {
                 fAuth.createUserWithEmailAndPassword(email, password)
                     .addOnCompleteListener { task ->
                         if (task.isSuccessful) {
                             _flowGame.update {
-                                it.copy(null, false, false, false)
+                                it.copy(error = null, isLoading = false, success =  false, navigate = false)
                             }
                             Log.d(TAG, "createUserWithEmail:success")
                             fireStore(username, name, surName, birthData, email, password)
                             click()
                         } else {
                             _flowGame.update {
-                                it.copy(null, false, false, false)
+                                it.copy(error = null, isLoading =  false, success =  false, navigate =  false)
                             }
                             Log.w(TAG, "createUserWithEmail:failure", task.exception)
                             fireStore(null, null)
@@ -91,7 +91,7 @@ class SignUpViewModel(private val context: Activity) : ViewModel() {
             )
             fStore.collection(USER).document(fUser.uid)
                 .set(data)
-                .addOnSuccessListener { void ->
+                .addOnSuccessListener {
                     Log.d(TAG, "DocumentSnapshot successfully written!")
                     _flowGame.update {
                         it.copy(error = null, isLoading = null, success = true)
@@ -99,7 +99,7 @@ class SignUpViewModel(private val context: Activity) : ViewModel() {
                 }.addOnFailureListener { except ->
                     Log.w(TAG, "error", except)
                     _flowGame.update {
-                        it.copy(except.message, isLoading = null, success = false)
+                        it.copy(error = except.message, isLoading = null, success = false)
                     }
                 }
         }

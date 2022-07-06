@@ -5,11 +5,11 @@ import android.content.ContentValues
 import android.content.Intent
 import android.util.Log
 import androidx.lifecycle.ViewModel
-import com.eneselcuk.gameyuppiapp.MainActivity
+import com.eneselcuk.gameyuppiapp.ui.activity.login.MainActivity
 import com.eneselcuk.gameyuppiapp.util.Constants.TAG
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
-import kotlinx.coroutines.flow.*
+
 
 
 class LoginViewModel(

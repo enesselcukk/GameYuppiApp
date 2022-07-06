@@ -1,6 +1,6 @@
 package com.eneselcuk.gameyuppiapp.di
 
-import android.app.Application
+
 import com.eneselcuk.gameyuppiapp.BuildConfig.BASE_URL
 import com.eneselcuk.gameyuppiapp.data.remote.service.GameService
 import com.google.gson.Gson

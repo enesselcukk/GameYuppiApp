@@ -34,9 +34,3 @@ fun ProgressBar.setProgress(visible: Boolean) {
 fun View.setVisible(visible: Boolean) {
     this.visibility = if (visible) View.VISIBLE else View.GONE
 }
-
-@BindingAdapter("app:btnVisible")
-fun View.setBtnVisible(visible: Boolean) {
-    this.visibility = if (visible) View.VISIBLE else View.GONE
-}
-
