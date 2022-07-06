@@ -54,6 +54,4 @@ class ProfileFragment : BaseFragment<FragmentProfileBinding>() {
 
     override val progressBar: View
         get() = TODO("Not yet implemented")
-
-
 }

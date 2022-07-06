@@ -15,14 +15,10 @@ class SignUpActivity : BaseActivity<ActivitySignUpBinding>(ActivitySignUpBinding
     private val viewModel: SignUpViewModel by lazy {
         SignUpViewModel(this@SignUpActivity)
     }
-
     override fun definition() {
         activityDataBinding.setData = this
         activityDataBinding.clickSignUp = viewModel
-
-
     }
-
     override fun setObserver() {
         lifecycleScope.launch {
             lifecycle.repeatOnLifecycle(Lifecycle.State.STARTED) {
@@ -35,11 +31,9 @@ class SignUpActivity : BaseActivity<ActivitySignUpBinding>(ActivitySignUpBinding
             }
         }
     }
-
     private fun uiState(fireUi: FiresUiState) {
         fireUi.error.let {
             "DocumentSnapshot successfully written!"
         }
-
     }
 }

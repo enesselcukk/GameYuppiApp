@@ -16,11 +16,8 @@ class DetailAdapter :
                 R.layout.view_item_detail, parent, false
             )
         )
-
     override fun onBindViewHolder(holder: DetailVHolder, position: Int) {
         val gamePosition = getItem(position)
         holder.bind(gamePosition)
     }
-
-
 }

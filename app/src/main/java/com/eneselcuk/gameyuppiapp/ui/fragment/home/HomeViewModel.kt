@@ -44,5 +44,4 @@ class HomeViewModel @Inject constructor(private val repository: GameRepos) : Vie
                 }
         }
     }
-
 }

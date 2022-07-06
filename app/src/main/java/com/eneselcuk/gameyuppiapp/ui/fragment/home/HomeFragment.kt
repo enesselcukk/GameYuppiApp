@@ -55,7 +55,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
             homeAdapter.submitList(it)
         }
     }
-
     override val progressBar: View
         get() = binding!!.progress
 }

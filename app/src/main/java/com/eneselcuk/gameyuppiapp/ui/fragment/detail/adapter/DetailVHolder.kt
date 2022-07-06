@@ -6,10 +6,5 @@ import com.eneselcuk.gameyuppiapp.databinding.ViewItemDetailBinding
 
 class DetailVHolder(private val binding: ViewItemDetailBinding) :
     RecyclerView.ViewHolder(binding.root) {
-
-    fun bind(
-        games: DeailsItem,
-    ) {
-        binding.deailDeata = games
-    }
+    fun bind(games: DeailsItem) { binding.deailDeata = games }
 }

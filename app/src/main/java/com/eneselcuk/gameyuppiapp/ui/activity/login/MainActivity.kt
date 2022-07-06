@@ -16,5 +16,4 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
         val navController = navHostFragment.navController
         activityDataBinding.navView.setupWithNavController(navController)
     }
-
 }

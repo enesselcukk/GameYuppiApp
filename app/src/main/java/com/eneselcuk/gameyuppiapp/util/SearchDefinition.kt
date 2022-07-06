@@ -14,7 +14,6 @@ fun searchV(
         override fun onQueryTextSubmit(query: String?): Boolean {
             return false
         }
-
         override fun onQueryTextChange(newText: String?): Boolean {
             val arrayListSearch = ArrayList<DeailsItem>()
             list.filter { search ->

@@ -47,6 +47,4 @@ class DetailViewModel @Inject constructor(private val repos: GameRepos) : ViewMo
                 }
         }
     }
-
-
 }
