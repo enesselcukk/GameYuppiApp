@@ -5,6 +5,7 @@ Libraries Used
   * [Lifecycles][3] Create a UI that automatically responds to lifecycle events.
   * [Navigation][4] Handle everything needed for in-app navigation.
   * [Flow][5] used for kotlin flow on android 
+  * [StateFlow][18] StateFlow A Flow that represents a read-only state with a single updatable data value that emits updates to the value to it                collectors
   * [ViewModel][6] Easily schedule asynchronous tasks for optimal execution.
   * [Retrofit][9] for turns your HTTP API into a Java interface
   * [Gson][10] for convert Java Objects into their JSON representation
@@ -42,3 +43,4 @@ https://user-images.githubusercontent.com/52752443/177541592-e9ecf191-0294-4f6e-
 [15]: https://developer.android.com/topic/architecture
 [16]: https://developer.android.com/kotlin/coroutines
 [17]: https://developer.android.com/kotlin/parcelize
+[18]: https://developer.android.com/kotlin/flow/stateflow-and-sharedflow
